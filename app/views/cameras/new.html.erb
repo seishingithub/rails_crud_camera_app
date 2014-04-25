@@ -1,0 +1,29 @@
+<h1>Add Camera Review</h1>
+
+<form action="/cameras" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+
+  <p>
+    <label for="camera_brand" class="form-label">Camera Brand</label>
+    <input name="camera[camera_brand]" id="camera_brand">
+  </p>
+
+  <p>
+    <label for="camera_model" class="form-label">Camera Model</label>
+    <input name="camera[camera_model]" id="camera_model">
+  </p>
+
+  <p>
+    <label for="camera_review" class="form-label">Camera Review</label>
+    <input name="camera[camera_review]" id="camera_review">
+  </p>
+
+  <p>
+    <label for="sample_image" class="form-label">Sample Image</label>
+    <input name="camera[sample_image]" id="sample_image">
+  </p>
+
+  <p>
+    <input type="submit" value="Create Camera Review" class="form-button">
+  </p>
+</form>

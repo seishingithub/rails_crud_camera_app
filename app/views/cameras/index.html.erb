@@ -1,0 +1,42 @@
+<div class="actions">
+  <a href="/cameras/new"> Add New Camera Review </a>
+
+  <h1>Cameras</h1>
+
+  <table class="table-standard">
+    <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Reviews</th>
+      <th>Sample Image</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @cameras.each do |camera| %>
+        <tr>
+          <td>
+            <a href="/cameras/<%= camera.id %>">
+              <%= camera.brand %>
+            </a>
+          </td>
+          <td>
+            <a href="/cameras/<%= camera.id %>">
+              <%= camera.camera_model %>
+            </a>
+          </td>
+          <td>
+            <a href="/cameras/<%= camera.id %>">
+              <%= camera.reviews %>
+            </a>
+          </td>
+          <td>
+            <a href="/cameras/<%= camera.id %>">
+              <%= camera.sample_image %>
+            </a>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
